@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "bet-maker"
+version = "0.1.0"
+description = ""
+authors = ["dmitrijpislakov <dmitriy.pislyakov@realtalk.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.101.1"
+aioredis = "1.3.1"
+uvicorn = "^0.23.2"
+pydantic-settings = "^2.0.3"
+asyncpg = "^0.28.0"
+aerich = "^0.7.2"
+
+
+
+[tool.aerich]
+tortoise_orm = "src.db.TORTOISE_ORM"
+location = "./migrations"
+src_folder = "./."
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
